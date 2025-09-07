@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1462sx3j7fx4"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhkvxx8f1og8" path="res://fancy key.obj" id="1_3hw8f"]
+[ext_resource type="Script" uid="uid://c2utn4htnmbb4" path="res://room_1_key.gd" id="1_3nx78"]
+[ext_resource type="Texture2D" uid="uid://dyoh4x8nc616n" path="res://metal texture.webp" id="2_3nx78"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oulud"]
+albedo_texture = ExtResource("2_3nx78")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_12gf2"]
+points = PackedVector3Array(-0.868511, -0.156911, 3.19183, 0.49583, 0.13035, 4.19701, -0.796464, 0.2022, 2.83278, 0.567877, -0.156911, 0.103871, -0.150064, 0.13035, -0.0401111, 0.424289, -0.156911, 4.269, -0.293652, 0.13035, 4.48452, 0.783344, 0.2022, 2.83278, -0.150064, -0.156911, -0.0401111, 0.855222, -0.156911, 3.19183, 0.567877, 0.13035, 0.103871, -0.221942, -0.156911, 4.48452, -0.868511, 0.13035, 2.83278, 0.136944, 0.2022, 1.8276, -0.796464, 0.2022, 3.26292, 0.136944, 0.13035, 4.55651, 0.855222, 0.13035, 2.83278, 0.783344, 0.2022, 3.26292, -0.437409, 0.13035, 4.34099, -0.868511, -0.156911, 2.90432, -0.580997, 0.2022, 3.4789, 0.136944, 0.13035, -0.0401111, 0.208822, -0.156911, 4.48452, 0.49583, -0.0850608, 4.269, -0.365531, -0.156911, 4.34099, 0.855222, -0.156911, 2.90432, -0.150064, 0.2022, 1.8276, 0.567877, 0.2022, 3.4789, 0.49583, 0.0585345, 4.269, 0.280532, 0.13035, 4.48452, 0.0650652, -0.156911, -0.0401111, -0.150064, 0.13035, 4.55651)
+
+[node name="room 1 key" type="Area3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_3nx78")
+
+[node name="FancyKey" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.441299, -1.19209e-07, -1.42521)
+mesh = ExtResource("1_3hw8f")
+surface_material_override/0 = SubResource("StandardMaterial3D_oulud")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.441299, -1.19209e-07, -1.42521)
+shape = SubResource("ConvexPolygonShape3D_12gf2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

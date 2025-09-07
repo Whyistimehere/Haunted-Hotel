@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp8mnd1kuwi3m"]
+
+[ext_resource type="Texture2D" uid="uid://c3xwuqmloxcfm" path="res://door 2d.png" id="1_f61qg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3a435"]
+size = Vector3(2.41385, 4.72253, 1.73053)
+
+[node name="bathroom door" type="StaticBody3D"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+texture = ExtResource("1_f61qg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.234278, 0.560242, 0.365265)
+shape = SubResource("BoxShape3D_3a435")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.234278, 0.560242, 0.365265)
+shape = SubResource("BoxShape3D_3a435")

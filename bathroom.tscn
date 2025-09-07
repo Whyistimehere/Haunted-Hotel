@@ -1,0 +1,278 @@
+[gd_scene load_steps=34 format=3 uid="uid://dg0bgm2gina47"]
+
+[ext_resource type="Texture2D" uid="uid://bdncjy0eqhnbc" path="res://white tile texture.jpg" id="1_0ykx7"]
+[ext_resource type="Texture2D" uid="uid://cojy6vryr32jk" path="res://white paint texture.jpg" id="2_qb7wk"]
+[ext_resource type="PackedScene" uid="uid://tssr46ok6xm4" path="res://bathroom_stall.tscn" id="3_qb7wk"]
+[ext_resource type="ArrayMesh" uid="uid://bnob516ry6amk" path="res://urinal.obj" id="4_83h1y"]
+[ext_resource type="Texture2D" uid="uid://fqtndsjwnm7k" path="res://Urinal.jpg" id="5_mc4l1"]
+[ext_resource type="ArrayMesh" uid="uid://58ss6gm1v715" path="res://bathroom sink.obj" id="6_4wjle"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dia5y"]
+size = Vector3(5, 0.05, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvg5p"]
+albedo_texture = ExtResource("1_0ykx7")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_83h1y"]
+points = PackedVector3Array(2.53869, 0.0940476, 2.53869, -2.53869, -0.0646825, -2.53869, -2.53869, 0.0940476, -2.53869, 2.53869, -0.0646825, -2.53869, -2.53869, -0.0646825, 2.53869, -2.53869, 0.0940476, 2.53869, 2.53869, 0.0940476, -2.53869, 2.53869, -0.0646825, 2.53869)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mc4l1"]
+albedo_texture = ExtResource("2_qb7wk")
+uv1_triplanar = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mc4l1"]
+points = PackedVector3Array(2.53869, 0.0940476, 2.53869, -2.53869, -0.0646825, -2.53869, -2.53869, 0.0940476, -2.53869, 2.53869, -0.0646825, -2.53869, -2.53869, -0.0646825, 2.53869, -2.53869, 0.0940476, 2.53869, 2.53869, 0.0940476, -2.53869, 2.53869, -0.0646825, 2.53869)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bch1d"]
+albedo_texture = ExtResource("5_mc4l1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ykvt"]
+albedo_texture = ExtResource("5_mc4l1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fg2y2"]
+albedo_texture = ExtResource("5_mc4l1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tyio"]
+albedo_texture = ExtResource("5_mc4l1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x68iw"]
+albedo_texture = ExtResource("5_mc4l1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uisx3"]
+albedo_texture = ExtResource("5_mc4l1")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_quu23"]
+points = PackedVector3Array(11.3837, 10.2636, -8.13175, 3.45795, -4.67631, -4.72053, 2.63867, -4.24416, -5.11963, -1.67319, 10.3863, 13.404, -1.60903, 10.3067, -10.2834, 11.3465, 8.49158, 13.0823, 8.69008, -3.45318, -2.84284, 5.53582, 4.83699, -13.2048, -2.3706, 8.04872, 13.0823, -1.04393, -1.24044, -2.84284, 9.4817, 10.559, 13.7083, 2.93913, -5.22462, -3.28644, 5.9814, 10.4275, -13.8619, -3.25758, 7.60586, 2.46091, 10.0183, 8.04872, 13.9695, 0.987348, 3.56212, -11.3118, 11.7892, 5.83753, 0.692071, 8.37216, 2.33271, -10.0103, -1.04393, 8.04872, 13.9695, -2.8324, 10.2671, -6.46267, 2.9878, 10.4539, -13.9089, 5.51552, -0.963241, -9.24875, 10.0183, -0.799134, -2.40202, 7.36189, -4.78176, -3.28644, 9.47207, 10.5439, -11.4642, 11.7981, 10.2597, 3.98203, -1.01719, 3.14592, -8.34615, -0.158466, -3.01188, -2.84284, 10.8412, 6.01821, -7.97931, 1.79558, -0.571902, -8.88912, -2.81866, 10.253, 6.9031, -2.26717, 6.01414, -6.74096)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aen2i"]
+albedo_color = Color(0.525101, 0.525101, 0.525101, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsdnj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llciw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wuelc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er6o3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnvnv"]
+albedo_color = Color(0.368479, 0.368479, 0.368479, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j74pf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g031k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8sq7k"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0v1m8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxn7k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ymwb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rswuk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eivsf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8bkkb"]
+points = PackedVector3Array(3.28961, 10.0374, 1.13274, -4.10441, 9.38308, -1.01553, -3.91748, 9.19682, -1.57311, -0.572232, -0.0929117, 0.841619, 3.14219, 9.19682, -2.87377, -2.05988, 9.75444, 2.69986, 0.726916, -0.0929117, -1.57311, -0.386863, 11.7998, -1.38707, 1.46996, 9.75444, 2.51381, 1.09844, -0.0929117, 0.0985416, -0.758383, 6.78126, -2.68772, -1.1299, -0.0929117, -1.20157, -3.91748, 9.75444, 1.02766, 3.88601, 9.56934, -1.57311, 1.46996, 11.4261, -2.31619, -2.05988, 11.4261, -1.75861, -0.386863, 11.7998, -0.458493, 0.540765, -0.0929117, 0.841619, 3.69986, 9.56934, 0.841619, -1.1299, -0.0929117, 0.0985416, -3.36059, 9.75444, 1.95623, 2.77067, 9.75444, 1.95623, 1.03774, 10.2649, 2.38309, -2.84254, 10.2632, 2.02943, 0.169245, 9.38308, 2.69986, 3.52098, 10.2802, 0.621226, -3.91748, 9.38308, -1.75861, -3.75163, 10.296, 0.623761, 3.88601, 9.38308, -0.0869548, 3.53839, 10.3014, -1.68774, -1.43546, 10.2782, 2.56781, 0.169245, 11.7998, -0.458493)
+
+[node name="bathroom" type="Node3D"]
+
+[node name="walls" type="StaticBody3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="walls"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mvg5p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_83h1y")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.23496, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D6"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mvg5p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/StaticBody3D6"]
+shape = SubResource("ConvexPolygonShape3D_83h1y")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="walls"]
+transform = Transform3D(-0.0183784, 0.989385, 0, -0.642686, -0.0282927, 0, 0, 0, 1, -2.36182, 1.61859, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D2"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mc4l1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_83h1y")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="walls"]
+transform = Transform3D(-0.0183784, 0.989385, 0, -0.642686, -0.0282927, 0, 0, 0, 1, 2.52478, 1.61859, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D3"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mc4l1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/StaticBody3D3"]
+shape = SubResource("ConvexPolygonShape3D_83h1y")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="walls"]
+transform = Transform3D(1.22847e-15, -4.32651e-08, 0.822229, -0.642949, -4.32651e-08, 0, 2.81042e-08, -0.98979, -3.59408e-08, 0.494309, 1.61859, 2.47054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D4"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mc4l1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 5.32907e-15, 1, 0, 4.23516e-22, 0, 0.733292, 0, 0, 0.40542)
+shape = SubResource("ConvexPolygonShape3D_mc4l1")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="walls"]
+transform = Transform3D(4.76807e-16, -4.32651e-08, 0.208199, -0.249548, -4.32651e-08, 0, 1.09081e-08, -0.98979, -9.10067e-09, -2.02278, 2.58183, 2.47054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D7"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mc4l1")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="walls"]
+transform = Transform3D(1.22847e-15, -4.32651e-08, 1, -0.642949, -4.32651e-08, 0, 2.81042e-08, -0.98979, -4.37114e-08, 0.159709, 1.61859, -2.46476)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/StaticBody3D5"]
+mesh = SubResource("BoxMesh_dia5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mc4l1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/StaticBody3D5"]
+shape = SubResource("ConvexPolygonShape3D_83h1y")
+
+[node name="stalls" type="StaticBody3D" parent="."]
+
+[node name="bathroom stall" parent="stalls" instance=ExtResource("3_qb7wk")]
+transform = Transform3D(-0.000459687, 0, -0.548456, 0, 0.607571, 0, 0.572605, 0, -0.0004403, 1.61405, 1.08711, -1.6771)
+
+[node name="bathroom stall2" parent="stalls" instance=ExtResource("3_qb7wk")]
+transform = Transform3D(-0.000459687, 0, -0.548456, 0, 0.607571, 0, 0.572605, 0, -0.0004403, 1.61405, 1.08711, -0.0797742)
+
+[node name="urinals" type="StaticBody3D" parent="."]
+
+[node name="urinal" type="StaticBody3D" parent="urinals"]
+transform = Transform3D(0.04, 0, 0, 0, -1.74846e-09, 0.04, 0, -0.04, -1.74846e-09, 0, 0.555548, -2.03677)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="urinals/urinal"]
+mesh = ExtResource("4_83h1y")
+surface_material_override/0 = SubResource("StandardMaterial3D_bch1d")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ykvt")
+surface_material_override/2 = SubResource("StandardMaterial3D_fg2y2")
+surface_material_override/3 = SubResource("StandardMaterial3D_5tyio")
+surface_material_override/4 = SubResource("StandardMaterial3D_x68iw")
+surface_material_override/5 = SubResource("StandardMaterial3D_uisx3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="urinals/urinal"]
+shape = SubResource("ConvexPolygonShape3D_quu23")
+
+[node name="urinal2" type="StaticBody3D" parent="urinals"]
+transform = Transform3D(0.04, 0, 0, 0, -1.74846e-09, 0.04, 0, -0.04, -1.74846e-09, -0.966779, 0.555548, -2.03677)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="urinals/urinal2"]
+mesh = ExtResource("4_83h1y")
+surface_material_override/0 = SubResource("StandardMaterial3D_bch1d")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ykvt")
+surface_material_override/2 = SubResource("StandardMaterial3D_fg2y2")
+surface_material_override/3 = SubResource("StandardMaterial3D_5tyio")
+surface_material_override/4 = SubResource("StandardMaterial3D_x68iw")
+surface_material_override/5 = SubResource("StandardMaterial3D_uisx3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="urinals/urinal2"]
+shape = SubResource("ConvexPolygonShape3D_quu23")
+
+[node name="urinal3" type="StaticBody3D" parent="urinals"]
+transform = Transform3D(0.04, 0, 0, 0, -1.74846e-09, 0.04, 0, -0.04, -1.74846e-09, -1.94863, 0.555548, -2.03677)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="urinals/urinal3"]
+mesh = ExtResource("4_83h1y")
+surface_material_override/0 = SubResource("StandardMaterial3D_bch1d")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ykvt")
+surface_material_override/2 = SubResource("StandardMaterial3D_fg2y2")
+surface_material_override/3 = SubResource("StandardMaterial3D_5tyio")
+surface_material_override/4 = SubResource("StandardMaterial3D_x68iw")
+surface_material_override/5 = SubResource("StandardMaterial3D_uisx3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="urinals/urinal3"]
+shape = SubResource("ConvexPolygonShape3D_quu23")
+
+[node name="sinks" type="StaticBody3D" parent="."]
+
+[node name="sink" type="StaticBody3D" parent="sinks"]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -2.01973, 0, 1.34001)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sinks/sink"]
+mesh = ExtResource("6_4wjle")
+surface_material_override/0 = SubResource("StandardMaterial3D_aen2i")
+surface_material_override/1 = SubResource("StandardMaterial3D_wsdnj")
+surface_material_override/2 = SubResource("StandardMaterial3D_llciw")
+surface_material_override/3 = SubResource("StandardMaterial3D_wuelc")
+surface_material_override/4 = SubResource("StandardMaterial3D_er6o3")
+surface_material_override/5 = SubResource("StandardMaterial3D_gnvnv")
+surface_material_override/6 = SubResource("StandardMaterial3D_j74pf")
+surface_material_override/7 = SubResource("StandardMaterial3D_g031k")
+surface_material_override/8 = SubResource("StandardMaterial3D_8sq7k")
+surface_material_override/9 = SubResource("StandardMaterial3D_0v1m8")
+surface_material_override/10 = SubResource("StandardMaterial3D_kxn7k")
+surface_material_override/11 = SubResource("StandardMaterial3D_8ymwb")
+surface_material_override/12 = SubResource("StandardMaterial3D_rswuk")
+surface_material_override/13 = SubResource("StandardMaterial3D_eivsf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sinks/sink"]
+shape = SubResource("ConvexPolygonShape3D_8bkkb")
+
+[node name="sink2" type="StaticBody3D" parent="sinks"]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -2.01973, 0, 0.226555)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sinks/sink2"]
+mesh = ExtResource("6_4wjle")
+surface_material_override/0 = SubResource("StandardMaterial3D_aen2i")
+surface_material_override/1 = SubResource("StandardMaterial3D_wsdnj")
+surface_material_override/2 = SubResource("StandardMaterial3D_llciw")
+surface_material_override/3 = SubResource("StandardMaterial3D_wuelc")
+surface_material_override/4 = SubResource("StandardMaterial3D_er6o3")
+surface_material_override/5 = SubResource("StandardMaterial3D_gnvnv")
+surface_material_override/6 = SubResource("StandardMaterial3D_j74pf")
+surface_material_override/7 = SubResource("StandardMaterial3D_g031k")
+surface_material_override/8 = SubResource("StandardMaterial3D_8sq7k")
+surface_material_override/9 = SubResource("StandardMaterial3D_0v1m8")
+surface_material_override/10 = SubResource("StandardMaterial3D_kxn7k")
+surface_material_override/11 = SubResource("StandardMaterial3D_8ymwb")
+surface_material_override/12 = SubResource("StandardMaterial3D_rswuk")
+surface_material_override/13 = SubResource("StandardMaterial3D_eivsf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sinks/sink2"]
+shape = SubResource("ConvexPolygonShape3D_8bkkb")
+
+[node name="sink3" type="StaticBody3D" parent="sinks"]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -2.01973, 0, -0.799128)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sinks/sink3"]
+mesh = ExtResource("6_4wjle")
+surface_material_override/0 = SubResource("StandardMaterial3D_aen2i")
+surface_material_override/1 = SubResource("StandardMaterial3D_wsdnj")
+surface_material_override/2 = SubResource("StandardMaterial3D_llciw")
+surface_material_override/3 = SubResource("StandardMaterial3D_wuelc")
+surface_material_override/4 = SubResource("StandardMaterial3D_er6o3")
+surface_material_override/5 = SubResource("StandardMaterial3D_gnvnv")
+surface_material_override/6 = SubResource("StandardMaterial3D_j74pf")
+surface_material_override/7 = SubResource("StandardMaterial3D_g031k")
+surface_material_override/8 = SubResource("StandardMaterial3D_8sq7k")
+surface_material_override/9 = SubResource("StandardMaterial3D_0v1m8")
+surface_material_override/10 = SubResource("StandardMaterial3D_kxn7k")
+surface_material_override/11 = SubResource("StandardMaterial3D_8ymwb")
+surface_material_override/12 = SubResource("StandardMaterial3D_rswuk")
+surface_material_override/13 = SubResource("StandardMaterial3D_eivsf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sinks/sink3"]
+shape = SubResource("ConvexPolygonShape3D_8bkkb")

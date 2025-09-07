@@ -1,0 +1,222 @@
+[gd_scene load_steps=26 format=3 uid="uid://cw6u4a7650t2"]
+
+[ext_resource type="PackedScene" uid="uid://4xcvucnccseq" path="res://lobby.tscn" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://bwcfjlp50jsi7" path="res://main.gd" id="1_kek77"]
+[ext_resource type="Texture2D" uid="uid://bdncjy0eqhnbc" path="res://white tile texture.jpg" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bbmahfgwvsysg" path="res://wooden texture 3.jpg" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://esmcekayvlt1" path="res://room_1.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dg0bgm2gina47" path="res://bathroom.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://byquca26vqwkw" path="res://room_label.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c54ut18h8h3n6" path="res://player.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://c1462sx3j7fx4" path="res://room_1_key.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://b0id6xxf3n1oy" path="res://door_1.tscn" id="9_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://bx0oapfmawctf" path="res://door_2.tscn" id="10_yaehf"]
+[ext_resource type="PackedScene" uid="uid://meakxtm3waal" path="res://door_3.tscn" id="11_074og"]
+[ext_resource type="PackedScene" uid="uid://naqv4fcdg8v4" path="res://door_4.tscn" id="12_cegan"]
+[ext_resource type="PackedScene" uid="uid://ckh4b0kqwvqf7" path="res://door_5.tscn" id="13_82xsv"]
+[ext_resource type="PackedScene" uid="uid://o350bjirc20j" path="res://door_6.tscn" id="14_getpj"]
+[ext_resource type="PackedScene" uid="uid://cp8mnd1kuwi3m" path="res://bathroom_door.tscn" id="15_ryguw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
+size = Vector3(2, 0.05, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_texture = ExtResource("2_1bvp3")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h2yge"]
+points = PackedVector3Array(-1.0565, 0.0314972, -10.0565, 1.0904, 0.0314972, 10.0565, 1.0904, 0.0314972, -10.0565, -1.0565, 0.0314972, 10.0565)
+
+[sub_resource type="BoxMesh" id="BoxMesh_272bh"]
+size = Vector3(0.05, 3, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+albedo_texture = ExtResource("3_7mycd")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kek77"]
+points = PackedVector3Array(-0.0488002, -1.52351, -0.77381, 0.0464192, 1.52351, 0.797619, -0.0488002, 1.52351, 0.797619, 0.0464192, -1.52351, 0.797619, 0.0464192, 1.52351, -0.77381, -0.0488002, 1.52351, -0.77381, -0.0488002, -1.52351, 0.797619, 0.0464192, -1.52351, -0.77381)
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_kek77")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0xm2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="motel" type="StaticBody3D" parent="."]
+
+[node name="lobby" parent="motel" instance=ExtResource("1_h2yge")]
+
+[node name="hallway" type="StaticBody3D" parent="motel"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="motel/hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.836156, 0, 0, 5.86916)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="motel/hallway/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47168, 0, 5.90181)
+mesh = SubResource("BoxMesh_7mycd")
+surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="motel/hallway/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47168, 0, 5.90181)
+shape = SubResource("ConvexPolygonShape3D_h2yge")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="motel/hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.836156, 0, 2.85006, 5.86916)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="motel/hallway/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47168, 0, 5.90181)
+mesh = SubResource("BoxMesh_7mycd")
+surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="motel/hallway/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47168, 0, 5.90181)
+shape = SubResource("ConvexPolygonShape3D_h2yge")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="motel/hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.461521, 1.5334, 18.4453)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="motel/hallway/StaticBody3D3"]
+mesh = SubResource("BoxMesh_272bh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="motel/hallway/StaticBody3D3"]
+shape = SubResource("ConvexPolygonShape3D_kek77")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="motel/hallway"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.28742, -2.56003, 1.5334, 18.2155)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="motel/hallway/StaticBody3D4"]
+mesh = SubResource("BoxMesh_272bh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="motel/hallway/StaticBody3D4"]
+shape = SubResource("ConvexPolygonShape3D_kek77")
+
+[node name="rooms" type="StaticBody3D" parent="motel"]
+
+[node name="room 1" parent="motel/rooms" instance=ExtResource("3_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99424, 0, 5.23477)
+
+[node name="room 2" parent="motel/rooms" instance=ExtResource("3_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99424, 0, 10.3169)
+
+[node name="room 3" parent="motel/rooms" instance=ExtResource("3_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99424, 0, 15.4751)
+
+[node name="room 4" parent="motel/rooms" instance=ExtResource("3_lquwl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.89021, 0, 14.6878)
+
+[node name="room 5" parent="motel/rooms" instance=ExtResource("3_lquwl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.89021, 0, 9.7151)
+
+[node name="room 6" parent="motel/rooms" instance=ExtResource("3_lquwl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.89021, 0, 4.74041)
+
+[node name="bathroom" parent="motel/rooms" instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.72992, 0, 21.6752)
+
+[node name="room labels" type="StaticBody3D" parent="motel"]
+
+[node name="room label" parent="motel/room labels" instance=ExtResource("6_7mycd")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -2.47837, 1.3469, 4.42009)
+
+[node name="Label3D" type="Label3D" parent="motel/room labels/room label"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.22232, 0.170833, 0.0587319)
+text = "Room 1"
+font_size = 70
+
+[node name="room label3" parent="motel/room labels" instance=ExtResource("6_7mycd")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -2.42586, 1.3469, 9.36532)
+
+[node name="Label3D" type="Label3D" parent="motel/room labels/room label3"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.22232, 0.170833, 0.0587319)
+text = "Room 3"
+font_size = 70
+
+[node name="room label5" parent="motel/room labels" instance=ExtResource("6_7mycd")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -2.40801, 1.3469, 14.3553)
+
+[node name="Label3D" type="Label3D" parent="motel/room labels/room label5"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.22232, 0.170833, 0.0587319)
+text = "Room 5"
+font_size = 70
+
+[node name="room label2" parent="motel/room labels" instance=ExtResource("6_7mycd")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -0.44969, 1.3469, 5.56254)
+
+[node name="Label3D" type="Label3D" parent="motel/room labels/room label2"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.22232, 0.170833, 0.0587319)
+text = "Room 2"
+font_size = 70
+
+[node name="room label4" parent="motel/room labels" instance=ExtResource("6_7mycd")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -0.454384, 1.3469, 10.659)
+
+[node name="Label3D" type="Label3D" parent="motel/room labels/room label4"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.22232, 0.170833, 0.0587319)
+text = "Room 4
+"
+font_size = 70
+
+[node name="room label6" parent="motel/room labels" instance=ExtResource("6_7mycd")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -0.454384, 1.3469, 15.6621)
+
+[node name="Label3D" type="Label3D" parent="motel/room labels/room label6"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.22232, 0.170833, 0.0587319)
+text = "Room 6
+"
+font_size = 70
+
+[node name="items" type="Node3D" parent="motel"]
+
+[node name="room 1 key" parent="motel/items" instance=ExtResource("8_4c57u")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -5.87577, 0.118907, 6.27569)
+
+[node name="doors" type="StaticBody3D" parent="motel"]
+
+[node name="door 2" parent="motel/doors" instance=ExtResource("10_yaehf")]
+transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -0.468074, 1.04353, 6.94442)
+
+[node name="door 3" parent="motel/doors" instance=ExtResource("11_074og")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.47266, 1.04361, 8.01445)
+
+[node name="door 4" parent="motel/doors" instance=ExtResource("12_cegan")]
+transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -0.424189, 1.04496, 12.0641)
+
+[node name="door 5" parent="motel/doors" instance=ExtResource("13_82xsv")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.46874, 0.990116, 12.9828)
+
+[node name="door 6" parent="motel/doors" instance=ExtResource("14_getpj")]
+transform = Transform3D(-0.0331372, 0, -0.398625, 0, 0.4, 0, 0.398625, 0, -0.0331372, -0.501204, 1.02577, 17.1142)
+
+[node name="bathroom door" parent="motel/doors" instance=ExtResource("15_ryguw")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.954042, 1.05822, 19.1703)
+
+[node name="door 1" parent="motel/doors" instance=ExtResource("9_2cqfq")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.50285, 1.03872, 2.98146)
+
+[node name="player" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90445, 0.676696, 3.67249)
+
+[connection signal="body_entered" from="motel/items/room 1 key" to="." method="_on_room_1_key_body_entered_2"]
+[connection signal="body_entered" from="motel/items/room 1 key" to="." method="_on_room_1_key_body_entered"]
+[connection signal="body_entered" from="motel/doors/door 3" to="." method="_on_door_3_body_entered"]
+[connection signal="body_entered" from="motel/doors/door 1" to="." method="_on_door_1_body_entered"]
