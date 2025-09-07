@@ -1,4 +1,5 @@
 extends Node3D
+var blah_blah = "yo mama"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
